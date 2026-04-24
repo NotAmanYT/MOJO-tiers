@@ -1,87 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MOJO Tiers Elite</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOJO Tiers</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div id="preloader"><div class="loader"></div></div>
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="loader"></div>
+</div>
 
+<!-- MOBILE MENU -->
+<div id="menuBtn">☰</div>
+
+<!-- SIDEBAR -->
 <aside id="sidebar">
-  <h2 class="logo">MOJO</h2>
+  <h1>MOJO TIERS</h1>
+
   <nav>
-    <button onclick="switchMode('nethpot')">Nethpot</button>
-    <button onclick="switchMode('axe')">Axe</button>
-    <button onclick="switchMode('crystal')">Crystal</button>
-    <button onclick="switchMode('mace')">Mace</button>
-    <button onclick="switchMode('smp')">SMP</button>
+    <button onclick="loadMode('nethpot')">Nethpot</button>
+    <button onclick="loadMode('axe')">Axe</button>
+    <button onclick="loadMode('crystal')">Crystal</button>
+    <button onclick="loadMode('mace')">Mace</button>
+    <button onclick="loadMode('smp')">SMP</button>
+    <button onclick="loadMode('sword')">Sword</button>
   </nav>
-  <div id="userPanel">
-    <button onclick="loginGoogle()">Login</button>
-  </div>
 </aside>
 
-<header>
-  <button id="menuBtn">☰</button>
-  <input type="text" id="search" placeholder="Search player...">
-  <div id="cartIcon" onclick="toggleCart()">🛒 <span id="cartCount">0</span></div>
-</header>
-
+<!-- MAIN -->
 <main>
-  <div id="leaderboard"></div>
+  <header>
+    <input type="text" id="search" placeholder="Search player...">
+  </header>
 
-  <section id="packs">
-    <h2>Texture Packs</h2>
-    <div id="packGrid"></div>
-  </section>
+  <section id="tiersContainer"></section>
 </main>
-
-<div id="cartModal" class="modal">
-  <div class="modal-content">
-    <h2>Cart</h2>
-    <div id="cartItems"></div>
-    <p>Total: ₹<span id="cartTotal">0</span></p>
-  </div>
-</div>
-
-<div id="adminPanel" class="modal">
-  <div class="modal-content">
-    <h2>Admin Panel</h2>
-    <input id="playerName" placeholder="Player name">
-    <input id="playerElo" placeholder="ELO">
-    <button onclick="addPlayer()">Add Player</button>
-  </div>
-</div>
-
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
-import { getFirestore, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
-
-const firebaseConfig = {
-  apiKey: "YOUR_KEY",
-  authDomain: "YOUR_DOMAIN",
-  projectId: "YOUR_ID"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-window.db = getFirestore();
-
-window.loginGoogle = async () => {
-  const provider = new GoogleAuthProvider();
-  const result = await signInWithPopup(auth, provider);
-  document.getElementById("userPanel").innerHTML =
-    `<img src="${result.user.photoURL}"> ${result.user.displayName}`;
-};
-</script>
 
 <script src="script.js"></script>
 </body>
