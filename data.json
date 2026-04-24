@@ -1,26 +1,26 @@
 {
-  "nethpot":[
-    {"name":"BlazeX","elo":2100},
-    {"name":"Inferno","elo":2050},
-    {"name":"Nova","elo":1700},
-    {"name":"Splash","elo":1300}
-  ],
-  "axe":[
-    {"name":"Crusher","elo":2000},
-    {"name":"Titan","elo":1950},
-    {"name":"Breaker","elo":1500}
-  ],
-  "crystal":[
-    {"name":"Detonate","elo":2200},
-    {"name":"EndGod","elo":2100},
-    {"name":"Blast","elo":1600}
-  ],
-  "mace":[
-    {"name":"SkyDrop","elo":2100},
-    {"name":"CritLord","elo":2050}
-  ],
-  "smp":[
-    {"name":"SurvivalGod","elo":2000},
-    {"name":"Ultra","elo":1900}
-  ]
+  "nethpot": {
+    "HT1": [
+      {"name": "ClutchGod", "uuid": "8667ba71b85a4004af54457a9734eed7"}
+    ],
+    "LT1": [
+      {"name": "PotionKing", "uuid": "853c80ef3c3749fdaa49938b674adae6"}
+    ],
+    "HT2": [
+      {"name": "NetherPro", "uuid": "4566e69fc90748ee8d71d7ba5aa00d20"}
+    ],
+    "LT2": [],
+    "HT3": [],
+    "LT3": [],
+    "HT4": [],
+    "LT4": [],
+    "HT5": [],
+    "LT5": []
+  },
+
+  "axe": { "HT1": [], "LT1": [], "HT2": [], "LT2": [], "HT3": [], "LT3": [], "HT4": [], "LT4": [], "HT5": [], "LT5": [] },
+  "crystal": { "HT1": [], "LT1": [], "HT2": [], "LT2": [], "HT3": [], "LT3": [], "HT4": [], "LT4": [], "HT5": [], "LT5": [] },
+  "mace": { "HT1": [], "LT1": [], "HT2": [], "LT2": [], "HT3": [], "LT3": [], "HT4": [], "LT4": [], "HT5": [], "LT5": [] },
+  "smp": { "HT1": [], "LT1": [], "HT2": [], "LT2": [], "HT3": [], "LT3": [], "HT4": [], "LT4": [], "HT5": [], "LT5": [] },
+  "sword": { "HT1": [], "LT1": [], "HT2": [], "LT2": [], "HT3": [], "LT3": [], "HT4": [], "LT4": [], "HT5": [], "LT5": [] }
 }
