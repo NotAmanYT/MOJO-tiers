@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOJO Tiers | Official MCTiers Style</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo-area">
+                <img src="logo.png" alt="Logo" class="main-logo" onerror="this.style.display='none'">
+                <h2>MOJO Tiers</h2>
+            </div>
+            <div class="menu-items">
+                <button onclick="loadTiers('Vanilla')" class="mode-btn">Vanilla</button>
+                <button onclick="loadTiers('SMP')" class="mode-btn">SMP</button>
+                <button onclick="loadTiers('Mace')" class="mode-btn">Mace</button>
+                <button onclick="loadTiers('Pot')" class="mode-btn">Pot</button>
+                <button onclick="loadTiers('Sword')" class="mode-btn">Sword</button>
+            </div>
+        </nav>
+
+        <main class="content">
+            <header>
+                <h1 id="current-mode-title">Vanilla Tiers</h1>
+                <p class="subtitle">Official Player Rankings</p>
+            </header>
+            <div id="tier-container">
+                </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
