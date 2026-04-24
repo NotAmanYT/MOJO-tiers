@@ -1,0 +1,16 @@
+{
+  "Sword PvP - Tier 1": [
+    "PlayerOne",
+    "PlayerTwo"
+  ],
+  "Crystal PvP - Tier 1": [
+    "PlayerThree"
+  ],
+  "Axe PvP - Tier 1": [
+    "PlayerFour",
+    "PlayerFive"
+  ],
+  "Potion PvP - Tier 1": [
+    "PlayerSix"
+  ]
+}
