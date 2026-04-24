@@ -1,0 +1,26 @@
+{
+  "nethpot":[
+    {"name":"BlazeX","elo":2100},
+    {"name":"Inferno","elo":2050},
+    {"name":"Nova","elo":1700},
+    {"name":"Splash","elo":1300}
+  ],
+  "axe":[
+    {"name":"Crusher","elo":2000},
+    {"name":"Titan","elo":1950},
+    {"name":"Breaker","elo":1500}
+  ],
+  "crystal":[
+    {"name":"Detonate","elo":2200},
+    {"name":"EndGod","elo":2100},
+    {"name":"Blast","elo":1600}
+  ],
+  "mace":[
+    {"name":"SkyDrop","elo":2100},
+    {"name":"CritLord","elo":2050}
+  ],
+  "smp":[
+    {"name":"SurvivalGod","elo":2000},
+    {"name":"Ultra","elo":1900}
+  ]
+}

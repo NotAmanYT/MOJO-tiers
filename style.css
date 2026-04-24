@@ -1,0 +1,114 @@
+:root {
+  --bg:#08090d;
+  --glass:rgba(255,255,255,0.05);
+
+  --ht1:#ff0000; --lt1:#0077ff;
+  --ht2:#ff6600; --lt2:#3399ff;
+  --ht3:#ffaa00; --lt3:#66ccff;
+  --ht4:#ffee00; --lt4:#99ddff;
+  --ht5:#ffff66; --lt5:#ccffff;
+}
+
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:white;
+}
+
+/* PRELOADER */
+#preloader{
+  position:fixed;
+  width:100%;height:100%;
+  background:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+.loader{
+  width:50px;height:50px;
+  border:5px solid #333;
+  border-top:5px solid #fff;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+@keyframes spin{100%{transform:rotate(360deg);}}
+
+/* SIDEBAR */
+#sidebar{
+  position:fixed;
+  width:220px;height:100%;
+  background:rgba(20,20,30,0.7);
+  backdrop-filter:blur(10px);
+  padding:20px;
+}
+#sidebar button{
+  display:block;width:100%;
+  margin:10px 0;
+  background:none;border:none;
+  color:white;cursor:pointer;
+}
+
+/* HEADER */
+header{
+  margin-left:220px;
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+  background:var(--glass);
+}
+
+/* MAIN */
+main{
+  margin-left:220px;
+  padding:20px;
+}
+
+/* PLAYER */
+.player{
+  display:flex;
+  align-items:center;
+  padding:10px;
+  margin:10px 0;
+  background:var(--glass);
+  border-radius:10px;
+  transition:0.2s;
+}
+.player:hover{transform:scale(1.05);}
+.player img{width:40px;margin-right:10px;}
+
+.ht1{color:var(--ht1);text-shadow:0 0 12px red;}
+.lt1{color:var(--lt1);}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.8);
+}
+.modal.show{display:flex;justify-content:center;align-items:center;}
+.modal-content{
+  background:#111;
+  padding:20px;
+  border-radius:10px;
+}
+
+/* PACKS */
+#packGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:10px;
+}
+.pack{
+  background:var(--glass);
+  padding:10px;
+  border-radius:10px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  #sidebar{transform:translateX(-100%);}
+  header,main{margin-left:0;}
+}
